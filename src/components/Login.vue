@@ -42,7 +42,7 @@ export default {
     };
   },
 
-  created() {
+  async created() {
     const token = await localStorage.getItem("token");
 
     if (token.length > 0) {
