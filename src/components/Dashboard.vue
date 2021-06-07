@@ -42,13 +42,9 @@ export default {
     },
 
     async created(){
-        const token = await localStorage.getItem('token')
-
-        if(token.length == 0){
-            this.$router.push({ name: "Home" })
-        } else {
-            store.dispatch('getJobs')
-        }
+        
+        store.dispatch('getJobs')
+        
     },
 
     computed: {
